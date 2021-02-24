@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Usage = "./reduce-filesize.sh filename.mp4 25"
+# 25 is the filesize you are targeting in megabytes
+
 bitrate="$(awk "BEGIN {print int($2 * 1024 * 1024 * 8 / $(ffprobe \
     -v error \
     -show_entries format=duration \
